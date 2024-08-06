@@ -17,6 +17,15 @@ library LibFacet {
     ) internal {
         sendFacetTransaction(abi.encodePacked(to), value, maxFeePerGas, gasLimit, data);
     }
+    
+    function sendFacetTransaction(
+        uint256 value,
+        uint256 maxFeePerGas,
+        uint256 gasLimit,
+        bytes memory data
+    ) internal {
+        sendFacetTransaction(bytes(''), value, maxFeePerGas, gasLimit, data);
+    }
 
     function sendFacetTransaction(
         bytes memory to,

@@ -14,7 +14,6 @@ contract DeployScript is Script {
         
         LibFacet.sendFacetTransaction(
           {
-            to: bytes(''),
             value: 0,
             maxFeePerGas: 10,
             gasLimit: 500_000,
