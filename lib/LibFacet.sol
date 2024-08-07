@@ -7,6 +7,7 @@ library LibFacet {
     using LibRLP for LibRLP.List;
     
     address constant facetInboxAddress = 0x00000000000000000000000000000000000FacE7;
+    uint8 constant facetTxType = 70;
     
     function sendFacetTransaction(
         address to,
@@ -43,8 +44,6 @@ library LibFacet {
         } else {
             revert("Unsupported chainId");
         }
-        
-        uint8 facetTxType = 70;
 
         LibRLP.List memory list;
 
